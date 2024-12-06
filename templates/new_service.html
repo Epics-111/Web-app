@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Post a New Service</h2>
+    <div class="form-container">
+        <form method="POST">
+            <div class="form-group">
+                <label for="title">Service Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="price">Price ($)</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="provider_name">Your Name</label>
+                <input type="text" id="provider_name" name="provider_name" required>
+            </div>
+            <div class="form-group">
+                <label for="provider_email">Your Email</label>
+                <input type="email" id="provider_email" name="provider_email" required>
+            </div>
+            <button type="submit" class="btn">Post Service</button>
+        </form>
+    </div>
+{% endblock %}

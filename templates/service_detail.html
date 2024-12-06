@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="service-detail">
+        <h2>{{ service.title }}</h2>
+        <p class="description">{{ service.description }}</p>
+        <div class="price">${{ "%.2f"|format(service.price) }}</div>
+        <div class="provider-info">
+            <p>Provider: {{ service.provider_name }}</p>
+            <p>Contact: {{ service.provider_email }}</p>
+        </div>
+        <a href="{{ url_for('book_service', service_id=service.id) }}" class="btn">Book Now</a>
+    </div>
+{% endblock %}
