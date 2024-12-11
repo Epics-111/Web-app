@@ -29,8 +29,9 @@ project/
 │   └── book_service.html      # Form to book a service
 └── instance/                  # Instance folder for SQLite database
     └── services.db            # SQLite database file
-Installation Instructions
 ```
+## Installation Instructions
+
 1.	Create a virtual environment:
 
         python -m venv venv
